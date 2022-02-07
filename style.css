@@ -1,0 +1,640 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #36454f;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 13vh;
+    background-color: #0c090a;
+}
+
+nav .logo {
+    /* background-color: red; */
+}
+
+nav .logo img {
+    width: 150px;
+    height: 70px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+nav .icon-nav {
+    display: flex;
+    padding: 25px 10px;
+    /* background-color: gray;/ */
+}
+
+
+/* .icon {
+    visibility: hidden;
+} */
+
+.icon i {
+    display: inline;
+    padding: 10px 10px;
+    border-radius: 4px;
+    font-size: 23px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.icon i:hover {
+    transform: scale(1.2);
+    color: rgb(235, 186, 28);
+    border: 1px solid black;
+}
+
+nav .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 10px;
+    /* padding-right: 15px; */
+}
+
+nav .nav-menu ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .nav-menu ul li {
+    padding: 18px 4px;
+}
+
+nav .nav-menu ul li a {
+    list-style: none;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 10px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+nav .nav-menu ul li a::after {
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    transition: all 0.5s ease;
+}
+
+nav .nav-menu ul li a::before {
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    top: 33px;
+    transition: all 0.5s ease;
+}
+
+nav .nav-menu ul li a:hover:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+}
+
+nav .nav-menu ul li a:hover:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    top: 33px;
+    font-weight: 700;
+}
+
+.nav-menu-1 {
+    background-color: gray;
+    width: 100%;
+    height: 80%;
+    visibility: hidden;
+}
+
+.nav-menu-1 ul li {
+    padding: 10px 0px;
+}
+
+.nav-menu-1 ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-menu-1 ul li a::after {
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    transition: all 0.5s ease;
+}
+
+.nav-menu-1 ul li a::before {
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    top: 33px;
+    transition: all 0.5s ease;
+}
+
+.nav-menu-1 ul li a:hover:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+}
+
+.nav-menu-1 ul li a:hover:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    top: 27px;
+    font-weight: 700;
+}
+
+.icon-fot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 2px;
+    transition: all 0.5s ease;
+}
+
+.icon-fot i {
+    display: table;
+    font-size: 30px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.icon-fot i:hover {
+    color: rgb(207, 135, 27);
+    border: 1px solid black;
+}
+
+.toggle-bar span:nth-child(1) {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    border-radius: 3px;
+}
+
+.toggle-bar {
+    position: absolute;
+    top: -10px;
+    right: 12%;
+    visibility: hidden;
+    z-index: 10000;
+}
+
+.toggle-bar span:nth-child(2) {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    border-radius: 3px;
+    top: 50px;
+}
+
+.toggle-bar span:nth-child(3) {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    border-radius: 3px;
+    top: 60px;
+}
+
+.banner {
+    width: 100%;
+    height: 70vh;
+    opacity: 0.5;
+}
+
+.bte {
+    text-transform: uppercase;
+    position: absolute;
+    color: black;
+    top: 40%;
+    padding: 5px 40px;
+    opacity: 1;
+}
+
+.banner img {
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    margin-top: 80px;
+    display: table;
+}
+
+.bt button {
+    border-radius: 2px;
+    border: 2px solid white;
+    padding: 7px 16px;
+    background-color: #fd349c;
+    opacity: 1;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    /* z-index: 100000; */
+    transform: translate(-50%);
+}
+
+.bt button::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: blue;
+    left: 0px;
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+.bt button:hover:after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    left: 0px;
+    top: 0;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.bt button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: blue;
+    right: 0px;
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+.bt button:hover:before {
+    content: "";
+    width: 50%;
+    opacity: 0.5;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    right: 0px;
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* tem section  */
+
+#team {
+    background-color: #52595d;
+    margin-top: -450px;
+}
+
+.tex {
+    color: #fd349c;
+    padding: 15px 0px;
+}
+
+.google {
+    display: flex;
+    color: white;
+}
+
+.google h4 {
+    padding-top: 55px;
+}
+
+.google img {
+    width: 35%;
+}
+
+.rating {
+    display: flex;
+    margin-top: -40px;
+    padding: 10px;
+}
+
+.rating i {
+    margin-left: 8px;
+    color: white;
+    padding-top: 5px;
+}
+
+.fe {
+    padding-left: 10px;
+}
+
+.rating-b {
+    padding-top: 60px;
+}
+
+.rating-b p {
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.rating-b p:hover {
+    background-color: #fd349c;
+}
+
+.good {
+    background-color: #301934;
+    border-radius: 5px;
+}
+
+.card-1 {
+    border: 1px solid black;
+    background-color: #454545;
+    border-radius: 8px;
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: blueviolet;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.box h1 {
+    color: #fd349c;
+    padding-left: 16px;
+}
+
+.card-1 div {
+    display: flex;
+}
+
+.card-1 div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-1 div div div {
+    display: flex;
+    flex-direction: row;
+    color: gold;
+}
+
+.name h6 {
+    color: white;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.name-tex {
+    color: white;
+    padding: 8px;
+}
+
+.customer-img div img {
+    width: 90px;
+    padding-left: 20px;
+}
+
+.support {
+    padding: 8px;
+    display: table;
+}
+
+.support .text-danger {
+    margin-top: -20px;
+}
+
+.b-1 .box {
+    background-color: blue;
+}
+
+.b-1 .box h1 {
+    color: rgb(43, 230, 99);
+}
+
+.b-2 .box {
+    background-color: green;
+}
+
+.b-2 .box h1 {
+    color: coral;
+}
+
+.b-3 .box {
+    background-color: #fd349c;
+}
+
+.b-3 .box h1 {
+    color: black;
+}
+
+.b-2 .box h1 {
+    margin-left: -3px;
+    color: red;
+}
+
+
+/* button option after card  */
+
+.btt button {
+    border-radius: 2px;
+    border: 2px solid white;
+    padding: 7px 16px;
+    background-color: #fd349c;
+    opacity: 1;
+    position: relative;
+    margin-top: 20px;
+}
+
+.btt button::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: blue;
+    left: 0px;
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+.btt button:hover:after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    left: 0px;
+    top: 0;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.btt button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: blue;
+    right: 0px;
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+.btt button:hover:before {
+    content: "";
+    width: 50%;
+    opacity: 0.5;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    right: 0px;
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+.section-img div img {
+    height: 80vh;
+}
+
+.web {
+    margin-top: -15px;
+}
+
+.tex-2 h1 {
+    letter-spacing: -0.2rem;
+}
+
+.card-box {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #343434;
+    margin-top: 10px;
+}
+
+.lap {
+    padding: 0px 30px;
+}
+
+.lap i {
+    font-size: 75px;
+    padding: 20px 0px;
+    color: white;
+}
+
+.lap h4 {
+    color: #fd349c;
+}
+
+.text-p p {
+    text-align: justify;
+    text-indent: 25px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 1080px) {
+    nav {
+        width: 100%;
+        z-index: 1000;
+    }
+    .nav-menu {
+        visibility: hidden;
+    }
+    .nav-menu-1 {
+        visibility: visible;
+        transform: translateY(-710px);
+        transition: all 0.5s ease;
+        /* z-index: -9999; */
+        position: absolute;
+        top: 82px;
+        position: fixed;
+    }
+    .icon {
+        visibility: hidden;
+    }
+    .toggle-bar {
+        visibility: visible;
+        position: fixed;
+    }
+    .bte {
+        text-transform: uppercase;
+        position: absolute;
+        color: black;
+        top: 30%;
+        padding: 5px 40px;
+        opacity: 1;
+    }
+    #team {
+        background-color: #343434;
+        margin-top: 65px;
+    }
+    .google h4 {
+        padding-top: 25px;
+    }
+    .rating-b {
+        padding-top: 30px;
+    }
+    .box h1 {
+        color: #fd349c;
+        padding-left: 18px;
+        padding-top: 10px;
+    }
+    .section-img div img {
+        height: 40vh;
+    }
+}
