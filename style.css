@@ -17,18 +17,20 @@ body {
 nav {
     display: flex;
     width: 100%;
+    z-index: 999999999199;
     height: 13vh;
     background-color: #0c090a;
 }
 
 nav .logo {
-    /* background-color: red; */
+    z-index: 999999999199;
 }
 
 nav .logo img {
     width: 150px;
     height: 70px;
     padding-left: 10px;
+    z-index: 999999999199;
     padding-top: 10px;
 }
 
@@ -286,6 +288,7 @@ nav .nav-menu ul li a:hover:before {
     left: 50%;
     /* z-index: 100000; */
     transform: translate(-50%);
+    /* z-index: -100000; */
 }
 
 .bt button::after {
@@ -368,7 +371,7 @@ nav .nav-menu ul li a:hover:before {
 
 .rating i {
     margin-left: 8px;
-    color: white;
+    color: rgb(202, 202, 3);
     padding-top: 5px;
 }
 
@@ -403,6 +406,7 @@ nav .nav-menu ul li a:hover:before {
     border: 1px solid black;
     background-color: #454545;
     border-radius: 8px;
+    /* z-index: -100000; */
 }
 
 .box {
@@ -422,6 +426,7 @@ nav .nav-menu ul li a:hover:before {
 
 .card-1 div {
     display: flex;
+    /* z-index: -100000; */
 }
 
 .card-1 div div {
@@ -500,6 +505,7 @@ nav .nav-menu ul li a:hover:before {
     opacity: 1;
     position: relative;
     margin-top: 20px;
+    /* z-index: -100000; */
 }
 
 .btt button::after {
@@ -565,20 +571,35 @@ nav .nav-menu ul li a:hover:before {
     border-radius: 5px;
     background-color: #343434;
     margin-top: 10px;
+    transition: all 0.5s ease;
+}
+
+.card-box:hover {
+    background-color: #ec69ad;
+}
+
+.card-box:hover.card-box i {
+    color: #36454f;
 }
 
 .lap {
     padding: 0px 30px;
 }
 
+.lap h4 {
+    color: #fd349c;
+    transition: all 0.4s ease;
+}
+
+.card-box:hover .lap h4 {
+    color: #77bfc7;
+}
+
 .lap i {
     font-size: 75px;
     padding: 20px 0px;
     color: white;
-}
-
-.lap h4 {
-    color: #fd349c;
+    transition: all 0.3s ease;
 }
 
 .text-p p {
@@ -587,22 +608,156 @@ nav .nav-menu ul li a:hover:before {
     padding: 0px 10px;
 }
 
+.contact p {
+    color: white;
+    padding-top: 65px;
+    font-size: 25px;
+}
+
+.contact i {
+    color: #fd349c;
+    font-size: 30px;
+    padding: 17px 10px;
+}
+
+.contact {
+    position: relative;
+}
+
+.contact::after {
+    content: "";
+    width: 92%;
+    height: 3px;
+    background-color: #6495ed;
+    position: absolute;
+    left: 4%;
+    top: 120px;
+}
+
+.contact::before {
+    content: "";
+    width: 92%;
+    height: 3px;
+    background-color: #6495ed;
+    position: absolute;
+    left: 4%;
+    top: 72px;
+}
+
+.pp h3 {
+    letter-spacing: -0.05rem;
+    font-size: 20px;
+    word-spacing: 6px;
+    padding: 10px;
+}
+
+.pp i {
+    font-size: 30px;
+    padding-right: 12px;
+    padding-top: 10px;
+    color: white;
+}
+
+.pp h3:last-child {
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+
+/* #fr {
+    background-color: #838996;
+    padding: 15px 30px;
+} */
+
+.fr {
+    background-color: #838996;
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+
+.f-name label {
+    font-size: 21px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.f-name input {
+    width: 90%;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.ms label {
+    font-size: 21px;
+    font-family: sans-serif;
+    color: white;
+}
+
+textarea {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+
+.fer {
+    width: 150%;
+    height: 20vh;
+    padding: 10px;
+}
+
+@media screen and (max-width: 912px) and (min-width: 481px) {
+    .contact::after {
+        content: "";
+        width: 92%;
+        height: 3px;
+        background-color: #6495ed;
+        position: absolute;
+        left: 4%;
+        top: 120px;
+    }
+    .logo img {
+        width: 120px;
+        height: 60px;
+    }
+    nav {
+        height: 8vh;
+    }
+    .nav-menu-1 {
+        height: 515px;
+        /* margin-top: 20px; */
+        padding-top: 3px;
+    }
+    .contact::after {
+        content: "";
+        width: 92%;
+        height: 3px;
+        background-color: #6495ed;
+        position: absolute;
+        left: 4%;
+        top: 120px;
+    }
+}
+
 @media screen and (max-width: 1080px) {
     nav {
         width: 100%;
-        z-index: 1000;
+        z-index: 99999999919;
+    }
+    .fer {
+        width: 90%;
     }
     .nav-menu {
         visibility: hidden;
     }
     .nav-menu-1 {
         visibility: visible;
-        transform: translateY(-710px);
-        transition: all 0.5s ease;
+        transform: translateY(-1410px);
+        transition: all 0.7s ease;
         /* z-index: -9999; */
         position: absolute;
         top: 82px;
         position: fixed;
+        z-index: 9999999;
     }
     .icon {
         visibility: hidden;
@@ -636,5 +791,14 @@ nav .nav-menu ul li a:hover:before {
     }
     .section-img div img {
         height: 40vh;
+    }
+    .contact::after {
+        content: "";
+        width: 92%;
+        height: 3px;
+        background-color: #6495ed;
+        position: absolute;
+        left: 4%;
+        top: 220px;
     }
 }
