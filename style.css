@@ -678,7 +678,8 @@ nav .nav-menu ul li a:hover:before {
 .f-name label {
     font-size: 21px;
     font-family: sans-serif;
-    color: white;
+    color: goldenrod;
+    font-weight: bold;
 }
 
 .f-name input {
@@ -690,7 +691,8 @@ nav .nav-menu ul li a:hover:before {
 .ms label {
     font-size: 21px;
     font-family: sans-serif;
-    color: white;
+    color: goldenrod;
+    font-weight: bold;
 }
 
 textarea {
@@ -741,7 +743,7 @@ textarea {
 @media screen and (max-width: 1080px) {
     nav {
         width: 100%;
-        z-index: 99999999919;
+        z-index: 999999999999999999919;
     }
     .fer {
         width: 90%;
@@ -757,7 +759,7 @@ textarea {
         position: absolute;
         top: 82px;
         position: fixed;
-        z-index: 9999999;
+        z-index: 9999999999999999;
     }
     .icon {
         visibility: hidden;
